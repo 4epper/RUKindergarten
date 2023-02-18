@@ -63,6 +63,7 @@ public class Classroom {
      * 
      * @param filename the student information input file
      */
+    
     public void enterClassroom ( String filename ) {
         StdIn.setFile(filename);
         int numOfStudents = StdIn.readInt();
@@ -76,7 +77,6 @@ public class Classroom {
             SNode ptr = new SNode(s, studentsInLine);
 
             studentsInLine = ptr;
-            // com
         }
     }
 

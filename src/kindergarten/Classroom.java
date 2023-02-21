@@ -102,8 +102,23 @@ public class Classroom {
      * @param seatingChart the seating chart input file
      */
     public void setupSeats(String seatingChart) {
+        StdIn.setFile(seatingChart);
+        int r = StdIn.readInt();
+        int c = StdIn.readInt();
+        seatingLocation = new boolean[r][c];
+        studentsSitting = new Student[r][c];
 
-        // WRITE YOUR CODE HERE
+        for (int x = 0; x < r; x++) {
+            for (int y = 0; y < c; y++) {
+                boolean read = StdIn.readBoolean();
+                if (read == true) {
+                    seatingLocation[x][y] = true;
+                } else {
+                    seatingLocation[x][y] = false;
+                }
+                
+            }
+        }
     }
 
     /**
@@ -121,7 +136,6 @@ public class Classroom {
      */
     public void seatStudents () {
 
-        // WRITE YOUR CODE HERE
     }
 
     /**
